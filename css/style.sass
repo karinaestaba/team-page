@@ -1,0 +1,151 @@
+$dark-color: hsla(0, 0%, 0%, 1)
+$font-primary: 'Poppins', sans-serif
+$font-secondary: 'PT Serif', serif
+
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html,
+body
+  background: hsl(0, 0%, 98%)
+
+  font-family: $font-primary
+  font-size: 14px
+  line-height: 21px
+  font-weight: 400
+  letter-spacing: -0.035em
+  color: $dark-color
+
+a
+  color: $dark-color
+  text-decoration: none
+
+img
+  width: 100%
+
+.main
+  &-container
+    max-width: 1200px
+    margin: 71px auto
+    padding: 0 1em
+    height: 100%
+
+  &-header
+    display: grid
+    grid-template-columns: 1fr
+    gap: 2rem
+
+    .header
+      &-title
+        font-size: 36px
+        line-height: 48px
+        font-weight: bold
+        letter-spacing: -.045em
+        font-family: $font-secondary
+        color: $dark-color
+
+      &-subtitle
+        font-family: $font-primary
+        font-weight: 600
+        font-size: 18px
+        text-transform: uppercase
+        line-height: 27px
+        margin-bottom: 10px
+
+      &-description
+        white-space: pre-line
+
+.grid
+  &-team-container
+    display: grid
+    grid-template-columns: repeat(2, minmax(auto, 2fr))
+    grid-template-rows: auto
+    margin: 66px auto 0
+    column-gap: 1rem
+    row-gap: 22px
+
+  &-item
+    
+    &:nth-of-type(even)
+      padding-top: 77px
+
+    &-title
+      display: block
+      font-family: $font-primary
+      font-weight: 600
+      margin-top: 1rem
+      font-size: 14px
+      line-height: 21px
+
+    &-body
+      display: grid
+      grid-template-areas: "imagen texto"
+      grid-auto-columns: auto 20px
+      gap: 0
+      justify-content: start
+
+      img
+        grid-area: imagen
+
+      .grid-item-job
+        white-space: nowrap
+        transform: rotate(90deg)
+        grid-area: texto
+        height: 30px
+        margin-top: -.2rem
+
+        font-family: $font-secondary
+        font-weight: 400
+        font-size: 10px
+        line-height: 25px
+        text-transform: uppercase
+
+@media screen and (min-width: 998px)
+  body
+    height: 100%
+    min-height: 100vh
+    font-size: 18px
+    line-height: 27px
+
+  .main
+    &-container
+      margin: 110px auto
+
+    &-header
+      grid-template-columns: 3fr 3fr
+      gap: 1rem
+
+  .grid
+    &-team-container
+      grid-template-columns: repeat(3, minmax(300px, 2fr))
+      margin-top: 96px
+      gap: 60px
+
+    &-item
+      padding: 0 1rem
+
+      &:nth-of-type(even)
+        padding-top: 0
+
+      &:nth-of-type(3n+2)
+        padding-top: 77px
+      
+
+      &-title
+        font-size: 18px
+        line-height: 27px
+      
+      &-body
+        gap: .3rem
+
+        img
+          max-width: 300px
+
+        .grid-item-job
+          font-size: 12px
+          line-height: 16px
+
