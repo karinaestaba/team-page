@@ -1,4 +1,4 @@
-# Dev Challenges - Page 404
+# Dev Challenges - Team page
 
 This is a solution to the [Team page challenge on Dev Challenges](https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U). Create my team page following the design. The page should be responsive.
 
