@@ -119,17 +119,21 @@ footer
     line-height: 16px
     text-align: center
     color: $medium-color
-    padding-bottom: 20px
+    padding: 0 20px 20px
 
     a
       color: lighten($dark-color, 25%)
-      font-weight: 700
+      font-weight: 600
       text-decoration: none
+      display: inline-block
 
       &:hover,
       &:active,
       &:focus
         color: darken($medium-color, 10%)
+
+    img
+      width: 12px
 
 @media screen and (min-width: 998px)
   body
